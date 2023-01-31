@@ -1,41 +1,42 @@
-# Booleans
+# Comments
 
-#t
-#f
-
-==>
-
-Program(Boolean, Boolean)
-
-# Identifiers
-
-one
-Two_Three
+# This is a comment
 
 ==>
 
-Program(Identifier, Identifier)
+Document(comment)
 
-# Strings
+# Whole Documents
 
-"hello"
-"one\"\\two"
+invoice: 34843
+date   : 2001-01-23
+bill-to: &id001
+    given  : Chris
+    family : Dumars
+    address:
+        lines: |
+            458 Walkman Dr.
+            Suite #292
+        city    : Royal Oak
+        state   : MI
+        postal  : 48046
+ship-to: *id001
+product:
+    - sku         : BL394D
+      quantity    : 4
+      description : Basketball
+      price       : 450.00
+    - sku         : BL4438H
+      quantity    : 1
+      description : Super Hoop
+      price       : 2392.00
+tax  : 251.42
+total: 4443.52
+comments: >
+    Late afternoon is best.
+    Backup contact is Nancy
+    Billsmer @ 338-4338.
 
 ==>
 
-Program(String, String)
-
-# Applications
-
-(begin
-  (when #t
-    (print (concat "hello" " " "world")))
-  (print "DONE"))
-
-==>
-
-Program(Application(
-  Identifier,
-  Application(Identifier, Boolean, Application(
-    Identifier, Application(Identifier, String, String, String)))
-  Application(Identifier, String)))
+Document(atom,meta,number,atom,meta,atom,meta,variableName,atom,meta,atom,meta,atom,meta,atom,meta,meta,string,string,atom,meta,atom,meta,atom,meta,number,atom,meta,variableName,atom,meta,meta,atom,meta,atom,meta,number,atom,meta,atom,meta,number,meta,atom,meta,atom,meta,number,atom,meta,atom,meta,number,atom,meta,number,atom,meta,number,atom,meta,meta,string,string,string)
