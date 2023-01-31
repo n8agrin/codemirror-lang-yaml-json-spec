@@ -1,7 +1,7 @@
 {
-  "name": "codemirror-lang-yaml",
+  "name": "codemirror-lang-yaml-json-spec",
   "version": "0.1.0",
-  "description": "YAML language support for CodeMirror",
+  "description": "YAML language support for CodeMirror, including json spec validation via yaml-language-server",
   "scripts": {
     "test": "mocha test/test.js",
     "prepare": "rollup -c"
