@@ -4,3 +4,4 @@
 /src/*.d.ts
 
 package-lock.json
+codemirror-lang-yaml-*.tgz
