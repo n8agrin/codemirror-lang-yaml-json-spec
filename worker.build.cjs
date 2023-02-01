@@ -1,6 +1,7 @@
 const { build } = require("esbuild");
 const alias = require("esbuild-plugin-alias");
 const url = require("url");
+const { webWorkerPlugin } = require("./build/esbuild-plugin-webworker.cjs");
 
 const compileWorker = async () => {
   await build({
@@ -13,6 +14,7 @@ const compileWorker = async () => {
     outdir: "./dist/worker",
     sourcemap: true,
     plugins: [
+      webWorkerPlugin,
       alias({
         path: require.resolve("path-browserify"),
         prettier: require.resolve("prettier/standalone.js"),

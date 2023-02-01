@@ -6,7 +6,7 @@
     "test": "mocha test/test.js",
     "build:lang": "rollup -c",
     "build:worker": "node ./worker.build.cjs",
-    "prepare": "npm run build:lang && npm run build:worker"
+    "prepare": "npm run build:lang"
   },
   "type": "module",
   "module": "dist/index.js",
